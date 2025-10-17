@@ -3,6 +3,7 @@
 The model has four layers
 
 ## Aplication 
+You can use Aplications like:
 - www
 - Email 
 - VOIP
