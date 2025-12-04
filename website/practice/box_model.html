@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Recreated composition</title>
+  <style>
+    /* page layout */
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #fff;
+      color: #000;
+    }
+ /* canvas container to position pieces absolutely */
+    .canvas{
+      position: relative;
+      width: 920px;
+      height: 920px;
+      margin: 0;
+      border: 0;
+    }
+ /* common square sizes used below */
+    .sq-small{ width: 60px; height: 60px; }
+    .sq-mid{   width: 80px; height: 80px; }
+    .sq-big{   width: 260px; height: 260px; }
+
+    /* big outlined square with inner blue square and a red square overlapping top-left */
+    .big-outline{
+      position: absolute;
+      left: 320px;
+      top: 80px;
+      width: 260px;
+      height: 260px;
+      border: 1px solid #222;
+      box-sizing: border-box;
+      background: #fff;
+    }
+    .blue{
+      position: absolute;
+      left: 395px; /* centered inside big-outline */
+      top: 170px;
+      width: 80px;
+      height: 80px;
+      background: blue;
+    }
+    .red{
+      position: absolute;
+      left: 305px; /* slightly left of big-outline's left */
+      top: 48px;   /* above the top of big-outline */
+      width: 60px;
+      height: 60px;
+      background: red;
+    }
+
+    /* small outlined box with green square and a left white strip like the example */
+    .green-wrapper{
+      position: absolute;
+      left: 20px;
+      top: 330px;
+      width: 64px;
+      height: 64px;
+      border: 1px solid #222;
+      box-sizing: border-box;
+      background: #fff;
+    }
+    .green{
+      position: absolute;
+      left: 10px; /* leaves a white strip at left inside the outline */
+      top: 6px;
+      width: 48px;
+      height: 48px;
+      background: green;
+    }
+
+    /* yellow inside small outlined box (upper-right group) */
+    .yellow-wrapper{
+      position: absolute;
+      left: 270px;
+      top: 500px;
+      width: 90px;
+      height: 90px;
+      border: 1px solid #222;
+      box-sizing: border-box;
+      background: #fff;
+    }
+    .yellow{
+      position: absolute;
+      left: 15px;
+      top: 15px;
+      width: 60px;
+      height: 60px;
+      background: yellow;
+    }
+
+    /* purple square to form the L-shape below-left, and an empty outlined white square underneath */
+    .purple{
+      position: absolute;
+      left: 200px;
+      top: 620px;
+      width: 60px;
+      height: 60px;
+      background: purple;
+    }
+    .white-outline{
+      position: absolute;
+      left: 200px;
+      top: 684px; /* right below the purple, forming the vertical leg */
+      width: 60px;
+      height: 60px;
+      border: 1px solid #222;
+      background: #fff;
+      box-sizing: border-box;
+    }
+
+    /* small validation text and links (bottom-left) */
+    .validate{
+      position: absolute;
+      left: 8px;
+      top: 820px;
+      font-size: 12px;
+    }
+    .validate a{ font-size: 12px; }
+
+    /* small adjustments to make outlines crisp on high-DPI */
+    *{ -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  </style>
+</head>
+<body>
+  <div class="canvas" aria-hidden="true">
+    <div class="red" title="red square"></div>
+    <div class="big-outline" title="big outlined square"></div>
+    <div class="blue" title="blue inner square"></div>
+    <div class="green-wrapper" title="green small outlined">
+      <div class="green"></div>
+    </div>
+    <div class="yellow-wrapper" title="yellow in small outline">
+      <div class="yellow"></div>
+    </div>
+<div class="purple" title="purple square"></div>
+    <div class="white-outline" title="empty outlined"></div>
+<div class="validate">
+      <strong>HTML/CSS Valid!</strong><br/>
+      <a href="https://validator.w3.org/" target="_blank" rel="noopener">Validate HTML</a> |
+      <a href="https://jigsaw.w3.org/css-validator/" target="_blank" rel="noopener">Validate CSS</a>
+    </div>
+  </div>
+</body>
+</html>
+
+ 
+
