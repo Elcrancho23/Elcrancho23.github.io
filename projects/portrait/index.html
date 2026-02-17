@@ -93,7 +93,20 @@ ctx.beginPath();
 ctx.closePath();
       ctx.fill();
 // Mouth 
-
+ctx.fillStyle = "#c97b7b";
+ctx.beginPath();
+ctx.ellipse(400, 520, 50, 20, 0, 0, Math.PI);
+ctx.fill();
+//Right pupil
+       ctx.fillStyle="#000000";
+         ctx.beginPath();
+          ctx.arc(460, 400, 8, 0, Math.PI * 2);
+        ctx.fill();
+//Left pupil
+    ctx.fillStyle= "#000000";
+     ctx.beginPath();
+        ctx.arc(340, 400, 8, 0, Math.PI * 2);
+        ctx.fill();
 </script>
 </body>
 </html>
