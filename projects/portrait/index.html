@@ -17,10 +17,30 @@ border:black 1px solid;
 const canvas= document.getElementById("canvas");
 const ctx=canvas.getContext("2d");
 //head
-ctx.fillStyle= "#f4c8a5";
+ctx.fillStyle="#f4c8a5";
 ctx.beginPath();
  ctx.ellipse(400, 420, 180, 220, 0, 0, Math.PI * 2);
  ctx.fill();
+// Left Ear 
+    ctx.fillStyle ="#f4c8a5";
+  ctx.beginPath();
+   ctx.ellipse(220, 420, 35, 50, 0, 0, Math.PI * 2);
+   ctx.fill();
+// Right Ear
+          ctx.fillStyle="#f4c8a5";
+        ctx.beginPath();
+           ctx.ellipse(580, 420, 35, 50, 0, 0, Math.PI * 2);
+        ctx.fill();
+// oval left ear 
+            ctx.fillStyle ="#e8b393";
+          ctx.beginPath();
+          ctx.ellipse(220, 420, 15, 25, 0, 0, Math.PI * 2);
+           ctx.fill();
+// oval right ear 
+           ctx.fillStyle="#e8b393";
+        ctx.beginPath();
+          ctx.ellipse(580, 420, 15, 25, 0, 0, Math.PI * 2);
+           ctx.fill();
 </script>
 </body>
 </html>
