@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang=“en”>
+<html lang="en">
 <head>
 <title>Here is my self portrait!</title> 
  <style> 
@@ -10,15 +10,17 @@ border:black 1px solid;
 </head> 
 <body>
 <h1> Here is my self portrait!</h1>
- <canvas id= “canvas” width= “800” height= “800”>
+ <canvas id= "canvas" width= "800" height= "800">
  </canvas>
 <script>
 //canvas setup
-const canvas= document.getElementById(“canvas”);
-const ctx=canvas.getContext(“2d”);
+const canvas= document.getElementById("canvas");
+const ctx=canvas.getContext("2d");
 //head
-
-
+ctx.fillStyle= "#f4c8a5";
+ctx.beginPath();
+ ctx.ellipse(400, 420, 180, 220, 0, 0, Math.PI * 2);
+ ctx.fill();
 </script>
 </body>
 </html>
