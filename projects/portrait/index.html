@@ -54,7 +54,38 @@ ctx.beginPath();
      ctx.beginPath();
      ctx.ellipse(540, 280, 70, 90, 0.3, 0, Math.PI * 2);
       ctx.fill();
+    //white part of eye left 
+   ctx.fillStyle="#ffffff";
+        ctx.beginPath();
+        ctx.ellipse(340, 400, 35, 25, 0, 0, Math.PI * 2);
+        ctx.fill();
+// white part of eye right  
+  ctx.fillStyle= "#ffffffa";
+        ctx.beginPath();
+        ctx.ellipse(460, 400, 35, 25, 0, 0, Math.PI * 2);
+        ctx.fill();
+//Brown part of eye right
+            ctx.fillStyle ="#3d2817";
+            ctx.beginPath();
+          ctx.arc(460, 400, 18, 0, Math.PI * 2);
+        ctx.fill();
+// Brown part of eye left
+  ctx.fillStyle="#3d2817"
+   ctx.beginPath();
+    ctx.arc(340, 400, 18, 0, Math.PI * 2);
+     ctx.fill();
+// Left eyebrow 
+           ctx.fillStyle="#3d2817";
+           ctx.beginPath();
+         ctx.ellipse(340, 350, 45, 12, -0.1, 0, Math.PI * 2);
+         ctx.fill();
+// Right eyebrow
+    ctx.fillStyle="#3d2817";
+         ctx.beginPath();
+      ctx.ellipse(460, 350, 45, 12, 0.1, 0, Math.PI * 2);
+        ctx.fill();
 </script>
 </body>
 </html>
+
 
