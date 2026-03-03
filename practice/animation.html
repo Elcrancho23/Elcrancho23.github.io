@@ -26,7 +26,7 @@
 {
 	//ctx.clearRect(0,0,canvas.width,canvas.height);
 	ctx.fillStyle = "green";
-	ctx.fillRect(x,300,10,10);
+	ctx.fillRect(x,300,50,50);
 }
 function move()
 {
@@ -40,13 +40,12 @@ x = x + speed;
 
 	ctx.clearRect(0,0,canvas.width,canvas.height);
 	ctx.fillStyle = "red";
-	ctx.fillRect(x,500,10,10);
-
+	ctx.fillRect(x,500,50,50);
 	ctx.fillStyle = "blue";
-	ctx.fillRect(x,700,10,10);
+	ctx.fillRect(x,700,50,50);
 	
          ctx.fillStyle = "black";
-	ctx.fillRect(x,900,10,10);
+	ctx.fillRect(x,900,50,50);
 	//drawrec(x);
 
 	draw(x);
