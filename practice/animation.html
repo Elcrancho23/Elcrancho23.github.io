@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> Animation</title>
+</head>
+<body>
+<canvas id="mycanvas"
+           width=800
+           height=800>
+</canvas> 
+ <script>
+       const canvas = document 
+      .getElementById("mycanvas");
+       const ctx = canvas.getContext("2d");
+           let x = 1;
+           //let x = 1;
+           let speed = 5;
+           let speed2=6;
+           let time= 0;
+	function drawrec(x){
+	//ctx.clearRect(0, 0,canvas.width,canvas.height);
+	ctx.fillStyle = "red";
+	ctx.fillRect(x,100,10,10);
+}
+	function draw(x)
+{
+	//ctx.clearRect(0,0,canvas.width,canvas.height);
+	ctx.fillStyle = "green";
+	ctx.fillRect(x,300,10,10);
+}
+function move()
+{
+x = x + speed;
+}
+       function animate(){ 
+           //x2=x2+speed2; 
+      // if(time < 160)
+    //{ x=0; } // is "assign"
+             // not equality
+
+	ctx.clearRect(0,0,canvas.width,canvas.height);
+	ctx.fillStyle = "red";
+	ctx.fillRect(x,500,10,10);
+
+	ctx.fillStyle = "blue";
+	ctx.fillRect(x,700,10,10);
+	
+         ctx.fillStyle = "black";
+	ctx.fillRect(x,900,10,10);
+	//drawrec(x);
+
+	draw(x);
+	move(x);
+    requestAnimationFrame(animate);
+ }
+ animate(); 
+</script>
+</body>
+</html> 
