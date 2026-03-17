@@ -126,9 +126,30 @@ function snakePit() {
            waitForInput(processInput);
              }
              }
+       function idolChamber() {
+    clear();
+          if (!hasIdol) {
+        print("On a pedestal sits the golden idol! You grab it carefully.");
+        hasIdol = true;
+         } else {
+        print("The idol chamber is empty now.");
+            }
+    print("Exits are: back to jungle path, or a dark tunnel to 'deep pit'.\nChoices:\n- jungle           path\n- deep pit");
+            function processInput(input) {
+                input = input.toLowerCase();
+                if (input === "jungle path") {
+                      junglePath();
+                 } else if (input === "deep pit") {
+                   deepPit();
+                          } else {
+            stayHere();
+            waitThenCall(idolChamber);
+        }
+    }
+    waitForInput(processInput);
+} 
 
-
-// now the prize 
+// now the last trap the bottomless pit
 // here is the game start
 function start() {
     print("JUNGLE TEMPLE ADVENTURE. Seek the idol and the treasure! Avoid deadly traps.");
