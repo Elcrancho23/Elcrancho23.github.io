@@ -96,7 +96,39 @@ function snakePit() {
     }
     waitForInput(processInput);
 }
-// now here his where we put the door for the idle.
+         function treasureRoom() {
+    clear();
+         if (hasKey && hasIdol) {
+        print("You unlock the door, place the idol, and the Treasure Room opens!");
+    print("Congratulations! You WIN!");
+        gameActive = false;
+            } else if (!hasIdol) {
+    print("The altar is empty. Maybe you need the idol from another room...");
+  print("Go back? Choices:\n- hallway");
+    function processInput(input) {
+            if (input.toLowerCase() === "hallway") {
+              hallway();
+            } else {
+                stayHere();
+                waitThenCall(treasureRoom);} }
+           waitForInput(processInput);
+           } else if (!hasKey) {
+           print("The treasure gate is locked tight. Maybe there's a key nearby...");
+            print("Go back? Choices:\n- hallway");
+             function processInput(input) {
+              if (input.toLowerCase() === "hallway") {
+                hallway();
+                   } else {
+                  stayHere();
+                waitThenCall(treasureRoom);
+                    }
+                   }
+           waitForInput(processInput);
+             }
+             }
+
+
+// now the prize 
 // here is the game start
 function start() {
     print("JUNGLE TEMPLE ADVENTURE. Seek the idol and the treasure! Avoid deadly traps.");
