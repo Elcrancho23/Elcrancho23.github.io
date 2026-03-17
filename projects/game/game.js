@@ -49,14 +49,14 @@ function boobyTrap() {
         stayHere();
             waitThenCall(locationB);
         }
-    }
+        }
     waitForInput(processInput);
 }
 function snakePit() {
-    clear();
-    print("You fall into a pit full of snakes! You are bitten...\nGAME OVER.");
-    gameActive = false;
-}
+             clear();
+       print("You fall into a pit full of snakes! You are bitten...\nGAME OVER.");
+      gameActive = false;
+            }
 
              function hallway() {
     clear();
@@ -76,7 +76,27 @@ function snakePit() {
         }
     }
     waitForInput(processInput);
-} // add the key part next and choices for the chamber
+} 
+         function hiddenChamber() {
+    clear();
+             if (!hasKey) {
+        print("This dusty chamber contains an ancient key! You take it.");
+        hasKey = true;
+                } else {
+        print("The chamber is empty now.");
+                 }
+                print("Where to? Choices:\n- hallway");
+                    function processInput(input) {
+        if (input.toLowerCase() === "hallway") {
+            hallway();
+                     } else {
+            stayHere();
+            waitThenCall(hiddenChamber);
+                  }
+    }
+    waitForInput(processInput);
+}
+// now here his where we put the door for the idle.
 // here is the game start
 function start() {
     print("JUNGLE TEMPLE ADVENTURE. Seek the idol and the treasure! Avoid deadly traps.");
