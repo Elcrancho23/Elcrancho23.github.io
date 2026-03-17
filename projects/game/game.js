@@ -1,25 +1,27 @@
-let gameActive = true; //this variable is required. 
-                       //to stop the game, set it to false.
+let gameActive = true; 
+let has Key= false;
+let hadIdol= false;
 
-//Declare your other global variables here
-
-
-//If you need, add any "helper" functions here
-
+function stayHere(){ 
+print("Try again");
 
 //Make one function for each location
-function locationA() {
+// Here are my loction functions
+function junglePath() {
     clear();
-    print("\nYou are in location A!");
-    print("\nWhere do you want to go next? Say one of these choices:" +
-        "\n\tlocationB");
-    
+    print("You are on a path in the jungle that leads to a jungle temple);
+    print ("where to? Choices: \n- entrance\n- booby trap\n- idol chamber");    
     function processInput(input){
-        if (input.toLowerCase() === "locationb") {
-            locationB();
-        } else {
+   input= input.toLowerCase();
+   if (input ==="entrance"){
+         entrance();} 
+       else if (input === "booby trap") {
+           boobyTrap();  } 
+       else if (input === "idol chamber") { 
+            idolChamber(); }
+           else{     
             stayHere();
-            waitThenCall(locationA);
+            waitThenCall(junglePath);
         }
     }
     waitForInput(processInput);
