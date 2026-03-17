@@ -33,17 +33,26 @@ function boobyTrap() {
     print("A spike trap springs! You are impaled...\nGAME OVER.");
     gameActive = false;
 }    
-    function processInput(input){
-        if (input.toLowerCase() === "locationa") {
-            locationA();
-        } else {
-            stayHere();
+    function entrance() {
+    clear();
+    print("You step into the crumbling temple entrance. Dim corridors lead in 3 directions.");
+    print("Where to? Choices:\n- hallway\n- snake pit\n- jungle path");
+      function processInput(input) {
+                  input = input.toLowerCase();
+             if (input === "hallway") {
+            hallway();
+            } else if (input === "snake pit") {
+                  snakePit();
+    } else if (input === "jungle path") {
+            junglePath();
+                   } else {            
+        stayHere();
             waitThenCall(locationB);
         }
     }
     waitForInput(processInput);
 }
-
+// put the snake pit and other imputs here 
 // here is the game start
 function start() {
     print("JUNGLE TEMPLE ADVENTURE. Seek the idol and the treasure! Avoid deadly traps.");
