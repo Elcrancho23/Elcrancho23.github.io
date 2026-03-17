@@ -146,9 +146,13 @@ function snakePit() {
             waitThenCall(idolChamber);
         }
     }
-    waitForInput(processInput);
-} 
-
+           waitForInput(processInput);
+             } 
+           function deepPit() {
+             clear();
+          print("You stumble, fall into a bottomless pit...\nGAME OVER.");
+             gameActive = false;
+         }
 // now the last trap the bottomless pit
 // here is the game start
 function start() {
