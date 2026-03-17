@@ -1,25 +1,26 @@
-let gameActive = true; 
-let has Key= false;
-let hadIdol= false;
+let gameActive = true;
+let hasKey = false;
+let hasIdol = false;
 
-function stayHere(){ 
-print("Try again");
+function stayHere() {
+    print("Try again!");
+}
 
-//Make one function for each location
-// Here are my loction functions
+// --- LOCATION FUNCTIONS ---
+
 function junglePath() {
     clear();
-    print("You are on a path in the jungle that leads to a jungle temple);
-    print ("where to? Choices: \n- entrance\n- booby trap\n- idol chamber");    
-    function processInput(input){
-   input= input.toLowerCase();
-   if (input ==="entrance"){
-         entrance();} 
-       else if (input === "booby trap") {
-           boobyTrap();  } 
-       else if (input === "idol chamber") { 
-            idolChamber(); }
-           else{     
+    print("You are on a Jungle Path leading to a temple.");
+    print("Where to? Choices:\n- entrance\n- booby trap\n- idol chamber");
+    function processInput(input) {
+        input = input.toLowerCase();
+             if (input === "entrance") {
+                 entrance();
+       } else if (input === "booby trap") {
+                 boobyTrap();
+    } else if (input === "idol chamber") {
+                   idolChamber();
+    } else {  
             stayHere();
             waitThenCall(junglePath);
         }
