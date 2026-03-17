@@ -45,14 +45,12 @@ function locationB() {
     waitForInput(processInput);
 }
 
-//finally, make sure you customize this to tell it what should happen at the
-//very start. For this simple example, any input will bring you
-//to locationA
-function start(){
-    print("Welcome to my game! Press any key to start");
-
-    function processInput(input){
-            locationA();
+// here is the game start
+function start() {
+    print("JUNGLE TEMPLE ADVENTURE. Seek the idol and the treasure! Avoid deadly traps.");
+    print("Press any key to begin...");
+    function processInput(input) {
+        junglePath();
     }
     waitForInput(processInput);
 }
