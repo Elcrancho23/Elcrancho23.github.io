@@ -28,12 +28,11 @@ function junglePath() {
     waitForInput(processInput);
 }
 
-function locationB() {
+function boobyTrap() {
     clear();
-    print("\nYou are in location B!");
-    print("\nWhere do you want to go next? Say one of these choices:" +
-        "\n\tlocationA");
-    
+    print("A spike trap springs! You are impaled...\nGAME OVER.");
+    gameActive = false;
+}    
     function processInput(input){
         if (input.toLowerCase() === "locationa") {
             locationA();
